@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		740E0DA0292A2697005AD5BB /* CoreML_ObjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0D9F292A2697005AD5BB /* CoreML_ObjectApp.swift */; };
-		740E0DA2292A2697005AD5BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DA1292A2697005AD5BB /* ContentView.swift */; };
+		740E0DA2292A2697005AD5BB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DA1292A2697005AD5BB /* MainView.swift */; };
 		740E0DA4292A2697005AD5BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E0DA3292A2697005AD5BB /* Assets.xcassets */; };
 		740E0DA7292A2697005AD5BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740E0DA6292A2697005AD5BB /* Preview Assets.xcassets */; };
+		740E0DAE292A56C2005AD5BB /* FruitClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DAD292A56C2005AD5BB /* FruitClassifier 1.mlmodel */; };
+		740E0DB3292A5C35005AD5BB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DB2292A5C35005AD5BB /* MainViewModel.swift */; };
+		740E0DB7292A5EB3005AD5BB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E0DB6292A5EB3005AD5BB /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		740E0D9C292A2697005AD5BB /* CoreML Object.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML Object.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		740E0D9F292A2697005AD5BB /* CoreML_ObjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreML_ObjectApp.swift; sourceTree = "<group>"; };
-		740E0DA1292A2697005AD5BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		740E0DA1292A2697005AD5BB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		740E0DA3292A2697005AD5BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		740E0DA6292A2697005AD5BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		740E0DAD292A56C2005AD5BB /* FruitClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FruitClassifier 1.mlmodel"; sourceTree = "<group>"; };
+		740E0DB2292A5C35005AD5BB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		740E0DB6292A5EB3005AD5BB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,10 @@
 		740E0D9E292A2697005AD5BB /* CoreML Object */ = {
 			isa = PBXGroup;
 			children = (
+				740E0DB4292A5E97005AD5BB /* Extensions */,
+				740E0DAF292A5C01005AD5BB /* Main */,
+				740E0DAD292A56C2005AD5BB /* FruitClassifier 1.mlmodel */,
 				740E0D9F292A2697005AD5BB /* CoreML_ObjectApp.swift */,
-				740E0DA1292A2697005AD5BB /* ContentView.swift */,
 				740E0DA3292A2697005AD5BB /* Assets.xcassets */,
 				740E0DA5292A2697005AD5BB /* Preview Content */,
 			);
@@ -65,6 +73,47 @@
 				740E0DA6292A2697005AD5BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		740E0DAF292A5C01005AD5BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				740E0DB1292A5C14005AD5BB /* ViewModel */,
+				740E0DB0292A5C10005AD5BB /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		740E0DB0292A5C10005AD5BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				740E0DA1292A2697005AD5BB /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		740E0DB1292A5C14005AD5BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				740E0DB2292A5C35005AD5BB /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		740E0DB4292A5E97005AD5BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				740E0DB5292A5EA0005AD5BB /* View */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		740E0DB5292A5EA0005AD5BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				740E0DB6292A5EB3005AD5BB /* ImagePicker.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				740E0DA2292A2697005AD5BB /* ContentView.swift in Sources */,
+				740E0DAE292A56C2005AD5BB /* FruitClassifier 1.mlmodel in Sources */,
+				740E0DA2292A2697005AD5BB /* MainView.swift in Sources */,
+				740E0DB7292A5EB3005AD5BB /* ImagePicker.swift in Sources */,
 				740E0DA0292A2697005AD5BB /* CoreML_ObjectApp.swift in Sources */,
+				740E0DB3292A5C35005AD5BB /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +301,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,11 +322,14 @@
 				DEVELOPMENT_TEAM = 7SDDGHR698;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fruit Detector";
+				INFOPLIST_KEY_NSCameraUsageDescription = "for take photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "for take photo from photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +337,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evc.hw.CoreML-Object";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,11 +357,14 @@
 				DEVELOPMENT_TEAM = 7SDDGHR698;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fruit Detector";
+				INFOPLIST_KEY_NSCameraUsageDescription = "for take photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "for take photo from photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +372,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evc.hw.CoreML-Object";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

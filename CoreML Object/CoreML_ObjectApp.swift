@@ -11,7 +11,7 @@ import SwiftUI
 struct CoreML_ObjectApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
